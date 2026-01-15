@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="   https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <script src="   https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <script src="script.js" defer></script>
+
+</head>
+<style>
+    .icon {
+        height: 20px;
+        width: 20px;
+    }
+
+    #bg-navbar {
+        background-color: #5b6be8;
+        height: 3rem;
+    }
+
+    #navbar {
+        background: #6d7beb;
+    }
+
+    input::placeholder {
+        color: white;
+    }
+
+    .custom-notification {
+        width: 15px;
+    }
+
+    .custom-notification h6 {
+        font-size: 10px;
+        margin: 3px;
+    }
+
+    #backButton {
+        border-radius: 4px;
+        padding: 8px;
+        border: none;
+        font-size: 16px;
+        background-color: #2eacd1;
+        color: white;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    .invisible {
+        display: none;
+    }
+</style>
+
+<body>
+    
+
+    <div class="row p-0 m-0 ">
+        
+        
+        <!-- 
+            sidebar
+        -->
+        <div class="col-lg-2 d-lg-block overflow-auto sticky-top collapse " style="background-color: #f7f8fa; height:650px;" id="sidebar">
+            
+            <button class="btn btn-light d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#sidebar">
+                    <i class="bi bi-list"></i>
+                </button>
+
+            <div class="mt-5" style="text-align: center;">
+                <h2>ANNEX</h2>
+            </div>
+
+
+            <small class="text-muted">Main</small>
+
+            <!-- dashboard -->
+            <div class="d-flex ps-2 px-2 mt-4 justify-content-between align-items-center">
+                <div>
+                <i class="bi bi-cast me-1"></i>
+                <a href="#" class="text-decoration-none text-success-emphasis " style="font-size: 20px;">Dashboard</a>
+                </div>
+                <span class="badge bg-primary h-100 w-10">7</span>
+            </div>
+
+            <!-- advance ui dropdown  -->
+            <div class="d-flex ps-2 px-2 mt-4 justify-content-between align-items-center">
+                <div>
+                    <i class="bi bi-layers me-1"></i>
+                    <a class="text-decoration-none text-success-emphasis" 
+                    data-bs-toggle="collapse" 
+                    href="#advancedUI" 
+                    role="button" 
+                    
+                    style="font-size: 20px;">
+                    Advanced UI
+                    </a>
+                </div>
+            
+                <a href="#advancedUI" data-bs-toggle="collapse"><i class="bi bi-chevron-down"></i></a>
+            </div>
+
+            <!-- dropdown list -->
+            <div class="collapse" id="advancedUI">
+                <div class="ps-4 py-3"> 
+                    <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Highlight</a>
+                    <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Rating</a>
+                    <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Rating</a>
+                    <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Alert</a>
+                    <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Range</a>
+                </div>
+            </div>
+
+            <!-- Calender -->
+            <div class="d-flex ps-2 px-2 mt-4 justify-content-between align-items-center">
+                <div>
+                <i class="bi bi-cast me-1"></i>
+                <a href="#" class="text-decoration-none text-success-emphasis " style="font-size: 20px;">Calender</a>
+                </div>
+                <span class="badge bg-primary h-100 w-10">2</span>
+            </div>
+
+            
+                <!-- Components -->
+                <small class="text-muted mt-4 d-block">Components</small>
+
+                <!-- Ui Elements dropdown  -->
+                <div class="d-flex ps-2 px-2 mt-4 justify-content-between align-items-center">
+                    <div>
+                        <i class="bi bi-bullseye me-1"></i>
+                        <a class="text-decoration-none text-success-emphasis" 
+                        data-bs-toggle="collapse" 
+                        href="#UIcomponent" 
+                        role="button" 
+                        
+                        style="font-size: 20px;">
+                        UI Comp
+                        </a>
+                    </div>
+                
+                    <a href="#UIcomponent" data-bs-toggle="collapse"><i class="bi bi-chevron-down "></i></a>
+                </div>
+
+                <!-- dropdown list -->
+                <div class="collapse" id="UIcomponent">
+                    <div class="ps-4 py-3"> 
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Buttons</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Modals</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Cards</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Alert</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Image</a>
+                    </div>
+                </div>
+
+
+                <!-- Forms dropdown  -->
+                <div class="d-flex ps-2 px-2 mt-4 justify-content-between align-items-center">
+                    <div>
+                        <i class="bi bi-clipboard me-1"></i>
+                        <a class="text-decoration-none text-success-emphasis" 
+                        data-bs-toggle="collapse" 
+                        href="#Forms" 
+                        role="button" 
+                        
+                        style="font-size: 20px;">
+                        Forms
+                        </a>
+                    </div>
+                
+                    <a href="#Forms" data-bs-toggle="collapse"><i class="bi bi-chevron-down"></i></a>
+                </div>
+
+                <!-- dropdown list -->
+                <div class="collapse" id="Forms">
+                    <div class="ps-4 py-3"> 
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Buttons</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Modals</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Cards</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Alert</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Image</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Name</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Input</a>
+
+
+                    </div>
+                </div>
+
+                <!-- Charts -->
+                <div class="d-flex ps-2 px-2 mt-4 justify-content-between align-items-center">
+                    <div>
+                        <i class="bi bi-speedometer me-1"></i>
+                        <a class="text-decoration-none text-success-emphasis" 
+                        data-bs-toggle="collapse" 
+                        href="#Charts" 
+                        role="button" 
+                        
+                        style="font-size: 20px;">
+                        Charts
+                        </a>
+                    </div>
+                
+                    <a href="#Charts" data-bs-toggle="collapse"><i class="bi bi-chevron-down"></i></a>
+                </div>
+
+                <!-- dropdown list -->
+                <div class="collapse" id="Charts">
+                    <div class="ps-4 py-3"> 
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Buttons</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Modals</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Cards</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Alert</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Image</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Name</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Input</a>
+                    </div>
+                </div>
+
+                <!-- Icons dropdown  -->
+                <div class="d-flex ps-2 px-2 mt-4 justify-content-between align-items-center">
+                    <div>
+                        <i class="bi bi-layers me-1"></i>
+                        <a class="text-decoration-none text-success-emphasis" 
+                        data-bs-toggle="collapse" 
+                        href="#Icons" 
+                        role="button" 
+                        
+                        style="font-size: 20px;">
+                        Icons
+                        </a>
+                    </div>
+                
+                    <a href="#Icons" data-bs-toggle="collapse"><i class="bi bi-chevron-down"></i></a>
+                </div>
+
+                <!-- dropdown list -->
+                <div class="collapse" id="Icons">
+                    <div class="ps-4 py-3"> 
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Buttons</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Modals</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Cards</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Alert</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Image</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Name</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Input</a>
+
+
+                    </div>
+                </div>
+
+                <!-- Tables  -->
+                <div class="d-flex ps-2 px-2 mt-4 justify-content-between align-items-center">
+                    <div>
+                        <i class="bi bi-table me-1"></i>
+                        <a class="text-decoration-none text-success-emphasis" 
+                        data-bs-toggle="collapse" 
+                        href="#Tables" 
+                        role="button" 
+                        
+                        style="font-size: 20px;">
+                        Tables
+                        </a>
+                    </div>
+                
+                    <a href="#Tables" data-bs-toggle="collapse"><i class="bi bi-chevron-down"></i></a>
+                </div>
+
+                <!-- dropdown list -->
+                <div class="collapse" id="Tables">
+                    <div class="ps-4 py-3"> 
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Buttons</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Modals</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Cards</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Alert</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Image</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Name</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Input</a>
+
+
+                    </div>
+                </div>
+
+            <small class="text-muted mt-4 d-block">Extra</small>
+
+                <!-- Maps  -->
+                <div class="d-flex ps-2 px-2 mt-4 justify-content-between align-items-center">
+                    <div>
+                        <i class="bi bi-geo-alt-fill me-1"></i>
+                        <a class="text-decoration-none text-success-emphasis" 
+                        data-bs-toggle="collapse" 
+                        href="#Maps" 
+                        role="button" 
+                        
+                        style="font-size: 20px;">
+                        Maps
+                        </a>
+                    </div>
+                
+                    <a href="#Maps" data-bs-toggle="collapse"><span class="badge bg-primary h-100 w-10">7</span></a>
+                </div>
+
+                <!-- dropdown list -->
+                <div class="collapse" id="Maps">
+                    <div class="ps-4 py-3"> 
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Buttons</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Modals</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Cards</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Alert</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Image</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Name</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Input</a>
+
+
+                    </div>
+                </div>
+
+                <!-- Pages  -->
+                <div class="d-flex ps-2 px-2 mt-4 mb-3 justify-content-between align-items-center">
+                    <div>
+                        <i class="bi bi-file me-1"></i>
+                        <a class="text-decoration-none text-success-emphasis" 
+                        data-bs-toggle="collapse" 
+                        href="#Tables" 
+                        role="button" 
+                        
+                        style="font-size: 20px;">
+                        Pages
+                        </a>
+                    </div>
+                
+                    <a href="#Pages" data-bs-toggle="collapse"><i class="bi bi-chevron-down"></i></a>
+                </div>
+
+                <!-- dropdown list -->
+                <div class="collapse" id="Pages">
+                    <div class="ps-4 py-3"> 
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Buttons</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Modals</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Cards</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Alert</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Image</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Name</a>
+                        <a href="" class="d-block text-decoration-none text-success-emphasis ms-3">Input</a>
+
+
+                    </div>
+                </div>
+
+
+
+
+        </div>
+        
+        <!-- 
+            nav bar content                                                                                                       
+        -->
+
+        <div class="col-lg-10 col-md-12 p-0 ">
+            
+            <div class="nav px-2 pt-2 pb-5 d-flex collapse align-items-center justify-content-between" id="bg-navbar">
+
+                <button class="btn btn-light d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#sidebar">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <!-- search button -->
+                <div class=" d-flex align-items-center " id="navbar">
+                    <input class="form-control rounded-pill  text-light" type="search" placeholder="Search" style="height: 30px;">
+                    
+                    <button class="btn p-2" type="submit">
+                        <img src="search-svgrepo-com.svg" class="icon" alt="search-icon" style="width: 30px; height: 30px;">
+                    </button>
+                </div>
+
+                <div class="nav-item d-flex align-items-center justify-content-between gap-1 p-2">
+                    <div class="container d-flex gap-2 align-items-center justify-content-center text-light">
+                        <h5 class="fs-6 m-0">English</h5>
+                        <img src="usa-svgrepo-com.svg" class="icon" alt="country-flag">
+                    </div>
+                    <div class="container d-flex position-relative">
+                        <img src="message-square-lines-alt-svgrepo-com.svg" class="icon" alt="messagebox-icon">
+                        <div
+                            class="container custom-notification rounded m-0 p-0 bg-danger position-absolute bottom-50 start-50 d-flex justify-content-center align-items-center">
+                            <h6 class="text-light fw-bold">5</h6>
+                        </div>
+                    </div>
+                    <div class="container d-flex position-relative">
+                        <img src="bell-svgrepo-com.svg" class="icon" alt="notification-icon">
+                        <div
+                            class="container custom-notification rounded m-0 p-0 bg-success position-absolute bottom-50 start-50 d-flex justify-content-center align-items-center">
+                            <h6 class="text-light fw-bold">23</h6>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <img src="profile-round-1342-svgrepo-com.svg" class="icon" alt="profile-icon">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 
+                main content  
+            -->
+            <!-- background color of whole page -->
+            <div class="" style="background-color: #eff3f6;">
+                <!-- Dashboard heading -->
+                <div class="container px-5">
+                    <div class="mx-3 pt-3 d-flex justify-content-between">
+                        <div>
+                            <h3><strong>Dashboard</strong></h3>
+                        </div>
+                        <div class="d-flex gap-2 pe-3">
+                            <a href="" class="text-secondary text-decoration-none">Annex</a>
+                            <p class="text-secondary text-decoration-none">/</p>
+                            <a href="" class="text-secondary text-decoration-none">Dashboard</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 
+                    four cards in an row
+                -->
+
+                <div class="my-2 mx-4 row g-4">
+
+                    <!-- Card 1 -->
+                    <div class="col-md-3 col-sm-12">
+                        <div class="rounded d-flex align-items-center px-3 py-5 gap-1 justify-content-around"
+                            style="background-color: white;">
+                            <img src="user_6543086.png" style="height:50px;width:50px;" class="rounded">
+                            <div>
+                                <p class="m-0 fw-bold fs-4">180</p>
+                                <p class="m-0">Visits Today</p>
+                            </div>
+                            <span class="text-danger fw-bold fs-3">↓ 5.26%</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-md-3 col-sm-12">
+                        <div class="rounded d-flex align-items-center px-3 py-5 gap-1 justify-content-around"
+                            style="background-color: white;">
+                            <img src="arrow_15277074.png" style="height:70px;width:70px;" class="rounded">
+                            <div>
+                                <p class="m-0 fw-bold fs-4">180</p>
+                                <p class="m-0">Visits Today</p>
+                            </div>
+                            <span class="text-success fw-bold fs-3">↑ 5.26%</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-md-3 col-sm-12">
+                        <div class="rounded d-flex align-items-center px-3 py-5 gap-1 justify-content-around"
+                            style="background-color: white;">
+                            <img src="security-camera_16872208.png" style="height:50px;width:50px;" class="rounded">
+                            <div>
+                                <p class="m-0 fw-bold fs-4">180</p>
+                                <p class="m-0">Visits Today</p>
+                            </div>
+                            <span class="text-danger fw-bold fs-3">↓ 5.26%</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-md-3 col-sm-12">
+                        <div class="rounded d-flex align-items-center px-3 py-5 gap-1 justify-content-around"
+                            style="background-color: white;">
+                            <img src="user_6543086.png" style="height:50px;width:50px;" class="rounded">
+                            <div>
+                                <p class="m-0 fw-bold fs-4">180</p>
+                                <p class="m-0">Visits Today</p>
+                            </div>
+                            <span class="text-success fw-bold fs-3">↑ 5.26%</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 
+                    charts section
+
+                -->
+
+                
+                <div class="row g-4 rounded mx-4 my-4">
+                    <!-- line chart -->
+                    <div class="col-lg-9 col-md-12 ">
+                        <div style="background-color:white;">
+                            <div class="p-2 ps-4 fw-bold fs-4"><span class="">Earnings Chart</span></div>
+                            <div style="height: 450px; width: 100%;"><canvas id="earningsChart"></canvas></div>
+
+                        </div>
+                    </div>
+
+                    <!-- pie chart -->
+                    <div class="col-lg-3 col-md-12">
+                        <div style="background-color: white;">
+                            <div id="chartContainer2" style="height: 450px; width: 100%;"></div>
+                            <button class="btn invisible" id="backButton">Back</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 
+                    Table and sidebar
+                -->
+                <div class="row gap-4 ms-2 ps-4 pe-2 pt-5">
+
+                    <!-- Table -->
+
+                    <div class="col-lg-8 col-sm-12" style="background-color: white;">
+                        <h5 class="fw-bold p-3">Member Profiles</h5>
+
+                        <div class="table-responsive col-md-12">
+                            <table class="col-md-12">
+                                <tr class="border-bottom">
+                                    <th class="px-3 pb-3">Member</th>
+                                    <th class="px-3 pb-3">Name</th>
+                                    <th class="px-3 pb-3">Country</th>
+                                    <th class="px-3 pb-3">Earnings</th>
+                                    <th class="px-3 pb-3">Sales</th>
+                                    <th class="px-3 pb-3">Reviews</th>
+                                    <th class="px-3 pb-3">Progress</th>
+                                </tr>
+
+                                <tr class="border-bottom">
+                                    <td class="px-3 py-1"><img src="icons8-person-50.png" alt=""></td>
+                                    <td class="p-3 py-1" style="color: #6d7beb; font-weight: 650;">Harsh</td>
+                                    <td class="p-3 py-1"><img src="icons8-india-50.png" alt=""></td>
+                                    <td class="p-3 py-1">$100</td>
+                                    <td class="p-3 py-1">80</td>
+                                    <td class="p-3 py-1"><img src="bar_11906632.png" alt=""
+                                            style="width: 70px; height: 90px;"></td>
+                                    <td class="p-3 py-1"><img src="Screenshot 2026-01-13 223414.png" alt=""
+                                            style="width: 60px; height: 60px;"></td>
+                                </tr>
+
+                                <tr class="border-bottom">
+                                    <td class="px-3 py-1"><img src="icons8-person-50.png" alt=""></td>
+                                    <td class="p-3 py-1" style="color: #6d7beb; font-weight: 650;">Rohit</td>
+                                    <td class="p-3 py-1"><img src="icons8-great-britain-48.png" alt=""></td>
+                                    <td class="p-3 py-1">$1300</td>
+                                    <td class="p-3 py-1">800</td>
+                                    <td class="p-3 py-1"><img src="bar_11906632.png" alt=""
+                                            style="width: 70px; height: 90px;"></td>
+                                    <td class="p-3 py-1"><img src="Screenshot 2026-01-13 223414.png" alt=""
+                                            style="width: 60px; height: 60px;"></td>
+                                </tr>
+
+                                <tr class="border-bottom">
+                                    <td class="px-3 py-1"><img src="icons8-person-50.png" alt=""></td>
+                                    <td class="p-3 py-1" style="color: #6d7beb; font-weight: 650;">Nikhil</td>
+                                    <td class="p-3 py-1"><img src="icons8-canada-50.png" alt=""></td>
+                                    <td class="p-3 py-1">$900</td>
+                                    <td class="p-3 py-1">80</td>
+                                    <td class="p-3 py-1"><img src="bar_11906632.png" alt=""
+                                            style="width: 70px; height: 90px;"></td>
+                                    <td class="p-3 py-1"><img src="Screenshot 2026-01-13 223414.png" alt=""
+                                            style="width: 60px; height: 60px;"></td>
+                                </tr>
+
+                                <tr class="border-bottom">
+                                    <td class="px-3 py-1"><img src="icons8-person-50.png" alt=""></td>
+                                    <td class="p-3 py-1" style="color: #6d7beb; font-weight: 650;">Uday</td>
+                                    <td class="p-3 py-1"><img src="icons8-indonesia-50.png" alt=""></td>
+                                    <td class="p-3 py-1">$500</td>
+                                    <td class="p-3 py-1">8</td>
+                                    <td class="p-3 py-1"><img src="bar_11906632.png" alt=""
+                                            style="width: 70px; height: 90px;"></td>
+                                    <td class="p-3 py-1"><img src="Screenshot 2026-01-13 223414.png" alt=""
+                                            style="width: 60px; height: 60px;"></td>
+                                </tr>
+
+                                <tr class="border-bottom">
+                                    <td class="px-3 py-1"><img src="icons8-person-50.png" alt=""></td>
+                                    <td class="p-3 py-1" style="color: #6d7beb; font-weight: 650;">Sohiel</td>
+                                    <td class="p-3 py-1"><img src="icons8-italy-50.png" alt=""></td>
+                                    <td class="p-3 py-1">$1000</td>
+                                    <td class="p-3 py-1">800</td>
+                                    <td class="p-3 py-1"><img src="bar_11906632.png" alt=""
+                                            style="width: 70px; height: 90px;"></td>
+                                    <td class="p-3 py-1"><img src="Screenshot 2026-01-13 223414.png" alt=""
+                                            style="width: 60px; height: 60px;"></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+
+
+                    <!-- 
+                        last section sidebar new user
+                    -->
+
+                    <div class="col-lg-3 col-md-12 overflow-auto" style="background-color: white; height: 600px;">
+                        <h5 class="fw-bold p-3">New Users</h5>
+
+                        <!-- content  -->
+
+                        <div class="p-2 ">
+
+                            <!-- card 1 -->
+                            <div class="  d-flex pb-4 ">
+                                <div class="col-2 p-0 me-2 ">
+                                    <img src="icons8-person-50-2.png" alt="" style="width: 100%; height: 50px;">
+                                </div>
+                                <div class=" col-10 d-flex flex-row justify-content-between ">
+
+                                    <div class="d-flex flex-column">
+                                        <span class="fw-bold" style="font: size 15px;">Ruby T.Curd</span>
+                                        <span class="text-secondary" style="font: size 10px;">Newyork</span>
+                                    </div>
+
+                                    <div class="d-flex flex-column justify-content-end p-1">
+                                        <div style="text-align: end;"><img src="icons8-filled-circle-32 (1).png" alt=""
+                                                style="width: 18px;height: 18px; text-align : end; "></div>
+                                        <div style="text-align: end;"><span class="text-secondary ">2 min ago</span>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+                            <!-- card 2 -->
+                            <div class="  d-flex pb-4">
+                                <div class="col-2 p-0 me-2 ">
+                                    <img src="icons8-person-50-2.png" alt="" style="width: 100%; height: 50px;">
+                                </div>
+                                <div class=" col-10 d-flex flex-row justify-content-between ">
+
+                                    <div class="d-flex flex-column">
+                                        <span class="fw-bold" style="font: size 15px;">Harsh</span>
+                                        <span class="text-secondary" style="font: size 10px;">Newyork</span>
+                                    </div>
+
+                                    <div class="d-flex flex-column justify-content-end p-1">
+                                        <div style="text-align: end;"><img src="icons8-filled-circle-green.png" alt=""
+                                                style="width: 18px;height: 18px; text-align : end; "></div>
+                                        <div style="text-align: end;"><span class="text-secondary ">Now</span></div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- card 3 -->
+                            <div class="  d-flex pb-4">
+                                <div class="col-2 p-0 me-2 ">
+                                    <img src="icons8-person-50-2.png" alt="" style="width: 100%; height: 50px;">
+                                </div>
+                                <div class=" col-10 d-flex flex-row justify-content-between ">
+
+                                    <div class="d-flex flex-column">
+                                        <span class="fw-bold" style="font: size 15px;">Ruby T.Curd</span>
+                                        <span class="text-secondary" style="font: size 10px;">Newyork</span>
+                                    </div>
+
+                                    <div class="d-flex flex-column justify-content-end p-1">
+                                        <div style="text-align: end;"><img src="icons8-filled-circle-32 (1).png" alt=""
+                                                style="width: 18px;height: 18px; text-align : end; "></div>
+                                        <div style="text-align: end;"><span class="text-secondary ">2 min ago</span>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- card 4 -->
+                            <div class="  d-flex pb-4 ">
+                                <div class="col-2 p-0 me-2 ">
+                                    <img src="icons8-person-50-2.png" alt="" style="width: 100%; height: 50px;">
+                                </div>
+                                <div class=" col-10 d-flex flex-row justify-content-between ">
+
+                                    <div class="d-flex flex-column">
+                                        <span class="fw-bold" style="font: size 15px;">Ruby T.Curd</span>
+                                        <span class="text-secondary" style="font: size 10px;">Newyork</span>
+                                    </div>
+
+                                    <div class="d-flex flex-column justify-content-end p-1">
+                                        <div style="text-align: end;"><img src="icons8-filled-circle-32 (1).png" alt=""
+                                                style="width: 18px;height: 18px; text-align : end; "></div>
+                                        <div style="text-align: end;"><span class="text-secondary ">2 min ago</span>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+                            <!-- card 5 -->
+                            <div class="  d-flex pb-4">
+                                <div class="col-2 p-0 me-2 ">
+                                    <img src="icons8-person-50-2.png" alt="" style="width: 100%; height: 50px;">
+                                </div>
+                                <div class=" col-10 d-flex flex-row justify-content-between ">
+
+                                    <div class="d-flex flex-column">
+                                        <span class="fw-bold" style="font: size 15px;">Ruby T.Curd</span>
+                                        <span class="text-secondary" style="font: size 10px;">Newyork</span>
+                                    </div>
+
+                                    <div class="d-flex flex-column justify-content-end p-1">
+                                        <div style="text-align: end;"><img src="icons8-filled-circle-green.png" alt=""
+                                                style="width: 18px;height: 18px; text-align : end; "></div>
+                                        <div style="text-align: end;"><span class="text-secondary ">Now</span></div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- card 6 -->
+                            <div class="  d-flex pb-4 ">
+                                <div class="col-2 p-0 me-2 ">
+                                    <img src="icons8-person-50-2.png" alt="" style="width: 100%; height: 50px;">
+                                </div>
+                                <div class=" col-10 d-flex flex-row justify-content-between ">
+
+                                    <div class="d-flex flex-column">
+                                        <span class="fw-bold" style="font: size 15px;">Ruby T.Curd</span>
+                                        <span class="text-secondary" style="font: size 10px;">Newyork</span>
+                                    </div>
+
+                                    <div class="d-flex flex-column justify-content-end p-1">
+                                        <div style="text-align: end;"><img src="icons8-filled-circle-32 (1).png" alt=""
+                                                style="width: 18px;height: 18px; text-align : end; "></div>
+                                        <div style="text-align: end;"><span class="text-secondary ">12 min ago</span>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- card 7 -->
+                            <div class="  d-flex pb-4 ">
+                                <div class="col-2 p-0 me-2 ">
+                                    <img src="icons8-person-50-2.png" alt="" style="width: 100%; height: 50px;">
+                                </div>
+                                <div class=" col-10 d-flex flex-row justify-content-between ">
+
+                                    <div class="d-flex flex-column">
+                                        <span class="fw-bold" style="font: size 15px;">Ruby T.Curd</span>
+                                        <span class="text-secondary" style="font: size 10px;">Newyork</span>
+                                    </div>
+
+                                    <div class="d-flex flex-column justify-content-end p-1">
+                                        <div style="text-align: end;"><img src="icons8-filled-circle-32 (1).png" alt=""
+                                                style="width: 18px;height: 18px; text-align : end; "></div>
+                                        <div style="text-align: end;"><span class="text-secondary ">5 min ago</span>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- card 8 -->
+                            <div class="  d-flex pb-4 ">
+                                <div class="col-2 p-0 me-2 ">
+                                    <img src="icons8-person-50-2.png" alt="" style="width: 100%; height: 50px;">
+                                </div>
+                                <div class=" col-10 d-flex flex-row justify-content-between ">
+
+                                    <div class="d-flex flex-column">
+                                        <span class="fw-bold" style="font: size 15px;">Ruby T.Curd</span>
+                                        <span class="text-secondary" style="font: size 10px;">Newyork</span>
+                                    </div>
+
+                                    <div class="d-flex flex-column justify-content-end p-1">
+                                        <div style="text-align: end;"><img src="icons8-filled-circle-green.png" alt=""
+                                                style="width: 18px;height: 18px; text-align : end; "></div>
+                                        <div style="text-align: end;"><span class="text-secondary ">Now</span></div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- footer -->
+                <div class="mt-5" style="background-color: #e0ebf4; height: 120px; text-align: center;">
+                    
+                    <p class="pt-5">© 2019 Annex by Mannatthemes.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+        
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+    <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+    <!-- Chart.js (for your Line Chart) -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- CanvasJS (for your Pie/Drilldown Chart) -->
+    <script src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
+
+</body>
+
+</html>
